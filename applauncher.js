@@ -10,16 +10,11 @@
       }
       if (Date.now() - startTime > timeout) {
         clearInterval(checkExist);
-        console.warn(
-          `⚠️ TheGraphAppLauncher: L'élément ${selector} n'a pas été trouvé après ${timeout}ms.`
-        );
       }
     }, interval);
   }
 
   waitForElement("#TheGraphAppLauncher", function (targetDiv) {
-    console.log("✅ TheGraphAppLauncher trouvé, insertion du menu...");
-
     const styleId = "applauncher-style";
     if (!document.getElementById(styleId)) {
       const style = document.createElement("style");
@@ -111,7 +106,6 @@
       document.head.appendChild(style);
     }
 
-    // Insérer le menu HTML dans le div cible
     targetDiv.innerHTML = `
             <div>
                 <label id="thegraph-dropdown-toggle" tabindex="0">
@@ -167,7 +161,5 @@
         dropdownContent.classList.remove("show");
       }
     });
-
-    console.log("✅ TheGraphAppLauncher inséré avec succès !");
   });
 })();
