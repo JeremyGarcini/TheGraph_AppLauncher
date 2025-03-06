@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 border-radius: 8px;
                 overflow: hidden;
                 grid-template-columns: repeat(2, 1fr);
+                margin-top: 8px;
             }
 
             #thegraph-dropdown-content.show {
@@ -72,7 +73,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 transition: background 0.3s;
             }
 
-            .thegraph-menu-item:hover {
+            .thegraph-menu-item.gradient-1:hover {
+                background: linear-gradient(to bottom right, #33203A, #231C40);
+            }
+
+            .thegraph-menu-item.gradient-2:hover {
+                background: linear-gradient(to bottom right, #33203A, #231C40);
+            }
+
+            .thegraph-menu-item.gradient-3:hover {
+                background: linear-gradient(to bottom right, #2B2C50, #1B1646);
+            }
+
+            .thegraph-menu-item.gradient-4:hover {
                 background: linear-gradient(to bottom right, #3D2329, #202245);
             }
 
@@ -87,35 +100,32 @@ document.addEventListener("DOMContentLoaded", function () {
   targetDiv.innerHTML = `
         <div>
             <label id="thegraph-dropdown-toggle" tabindex="0">
-                <span class="icon-menu">
-                    <i data-lucide="grip"></i>
-                </span>
-                <span class="icon-logo hidden">
+                <span class="icon-logo">
                     <img src="https://thegraph.market/images/TheGraph_logo.svg" alt="The Graph logo" />
                 </span>
                 <span>Apps</span>
             </label>
             <ul id="thegraph-dropdown-content">
                 <li>
-                    <a href="https://thegraph.com/studio/" target="_blank" class="thegraph-menu-item">
+                    <a href="https://thegraph.com/studio/" target="_blank" class="thegraph-menu-item gradient-1">
                         <img src="https://thegraph.market/images/app-launcher/subgraph.svg" alt="Subgraph Studio logo" />
                         <p>Subgraph Studio</p>
                     </a>
                 </li>
                 <li>
-                    <a href="https://thegraph.com/explorer" target="_blank" class="thegraph-menu-item">
+                    <a href="https://thegraph.com/explorer" target="_blank" class="thegraph-menu-item gradient-2">
                         <img src="https://thegraph.market/images/app-launcher/graph-explorer.svg" alt="Graph Explorer logo" />
                         <p>Graph Explorer</p>
                     </a>
                 </li>
                 <li>
-                    <a href="https://substreams.dev" target="_blank" class=thegraph-"menu-item">
+                    <a href="https://substreams.dev" target="_blank" class="thegraph-menu-item gradient-3">
                         <img src="https://thegraph.market/images/app-launcher/substreams.svg" alt="Substreams logo" />
                         <p>Substreams.dev</p>
                     </a>
                 </li>
                 <li>
-                    <a href="https://thegraph.market" target="_blank" class="thegraph-menu-item">
+                    <a href="https://thegraph.market" target="_blank" class="thegraph-menu-item gradient-4">
                         <img src="https://thegraph.market/images/app-launcher/thegraph-market.svg" alt="The Graph Market logo" />
                         <p>The Graph Market</p>
                     </a>
