@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 display: inline-block;
             }
 
-            #dropdown-toggle {
+            #thegraph-dropdown-toggle {
                 display: flex;
                 gap: 8px;
                 align-items: center;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 height: 16px;
             }
 
-            #dropdown-content {
+            #thegraph-dropdown-content {
                 display: none;
                 position: absolute;
                 right: 0;
@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            #dropdown-content.show {
+            #thegraph-dropdown-content.show {
                 display: grid;
             }
 
-            .menu-item {
+            .thegraph-menu-item {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -72,11 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 transition: background 0.3s;
             }
 
-            .menu-item:hover {
+            .thegraph-menu-item:hover {
                 background: linear-gradient(to bottom right, #3D2329, #202245);
             }
 
-            .menu-item img {
+            .thegraph-menu-item img {
                 width: 32px;
                 height: 32px;
             }
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   targetDiv.innerHTML = `
         <div>
-            <label id="dropdown-toggle" tabindex="0">
+            <label id="thegraph-dropdown-toggle" tabindex="0">
                 <span class="icon-menu">
                     <i data-lucide="grip"></i>
                 </span>
@@ -95,27 +95,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 </span>
                 <span>Apps</span>
             </label>
-            <ul id="dropdown-content">
+            <ul id="thegraph-dropdown-content">
                 <li>
-                    <a href="https://thegraph.com/studio/" target="_blank" class="menu-item">
+                    <a href="https://thegraph.com/studio/" target="_blank" class="thegraph-menu-item">
                         <img src="https://thegraph.market/images/app-launcher/subgraph.svg" alt="Subgraph Studio logo" />
                         <p>Subgraph Studio</p>
                     </a>
                 </li>
                 <li>
-                    <a href="https://thegraph.com/explorer" target="_blank" class="menu-item">
+                    <a href="https://thegraph.com/explorer" target="_blank" class="thegraph-menu-item">
                         <img src="https://thegraph.market/images/app-launcher/graph-explorer.svg" alt="Graph Explorer logo" />
                         <p>Graph Explorer</p>
                     </a>
                 </li>
                 <li>
-                    <a href="https://substreams.dev" target="_blank" class="menu-item">
+                    <a href="https://substreams.dev" target="_blank" class=thegraph-"menu-item">
                         <img src="https://thegraph.market/images/app-launcher/substreams.svg" alt="Substreams logo" />
                         <p>Substreams.dev</p>
                     </a>
                 </li>
                 <li>
-                    <a href="https://thegraph.market" target="_blank" class="menu-item">
+                    <a href="https://thegraph.market" target="_blank" class="thegraph-menu-item">
                         <img src="https://thegraph.market/images/app-launcher/thegraph-market.svg" alt="The Graph Market logo" />
                         <p>The Graph Market</p>
                     </a>
@@ -124,8 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     `;
 
-  const dropdownToggle = targetDiv.querySelector("#dropdown-toggle");
-  const dropdownContent = targetDiv.querySelector("#dropdown-content");
+  const dropdownToggle = targetDiv.querySelector("#thegraph-dropdown-toggle");
+  const dropdownContent = targetDiv.querySelector("#thegraph-dropdown-content");
 
   dropdownToggle.addEventListener("click", function (event) {
     event.stopPropagation();
